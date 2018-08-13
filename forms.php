@@ -4,12 +4,12 @@ include 'header.php';
 $api_key = "bacd94b18b";
 $private_key = "bfad9094405ce6d";
 $method  = "GET";
-$route    = "forms/3";
+$route    = "forms/2";
 $expires = strtotime("+60 mins");
 $string_to_sign = sprintf("%s:%s:%s:%s", $api_key, $method, $route, $expires);
 $sig = calculate_signature($string_to_sign, $private_key);
 
-$geturl =  'http://adventurewomen.staging.wpengine.com/gravityformsapi/'.$route.'/?api_key='.$api_key.'&signature='.$sig.'&expires='.$expires;
+$geturl =  'http://experience.thomsonsafaris.com/gravityformsapi/'.$route.'/?api_key='.$api_key.'&signature='.$sig.'&expires='.$expires;
 echo $geturl;
 $response = file_get_contents($geturl);
 $entries = json_decode($response, true);
