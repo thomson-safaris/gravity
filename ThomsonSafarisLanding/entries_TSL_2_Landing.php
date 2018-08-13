@@ -10,6 +10,7 @@ $string_to_sign = sprintf("%s:%s:%s:%s", $api_key, $method, $route, $expires);
 $sig = calculate_signature($string_to_sign, $private_key);
 
 $geturl =  'http://experience.thomsonsafaris.com/gravityformsapi/'.$route.'/?api_key='.$api_key.'&signature='.$sig.'&expires='.$expires;
+echo $geturl;
 $response = file_get_contents($geturl);
 $entries = json_decode($response, true);
 
@@ -33,6 +34,7 @@ foreach($entries["response"]["entries"] as $entry){
 
 	$sql="call TSL_1_Landing ('$first', '$last', '$email', '$address1', '$address2', '$city', '$state', '$zip', '$country', '$comments', '$ip', '$source_url', '$self_source',  '$entrydate', '$form');";
 	mysqli_query($con, $sql);
+	echo $sql;
 }
 
 /**/
