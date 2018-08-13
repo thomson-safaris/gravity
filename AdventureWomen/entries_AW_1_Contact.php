@@ -28,6 +28,7 @@ foreach($entries["response"]["entries"] as $entry){
 
 	$sql="call AW_1_Contact ('$first', '$last', '$email', '$phone', '$interest', '$comments', '$ip', '$source_url', '$self_source',  '$entrydate', '$form');";
 	mysqli_query($con, $sql);
+	echo $sql;
 }
 
 /**/

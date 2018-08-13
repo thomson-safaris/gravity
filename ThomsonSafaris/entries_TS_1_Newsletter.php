@@ -24,5 +24,6 @@ foreach($entries["response"]["entries"] as $entry){
 
 	$sql="call TS_1_Newsletter ('$fullname', '$email', '$ip', '$source_url', '$entrydate', '$form');";
 	mysqli_query($con, $sql);
+	echo $sql;
 }
 
