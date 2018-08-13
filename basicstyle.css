@@ -1,0 +1,17 @@
+body{
+	text-align: left;
+	font-size: 15px;
+	font-family: Arial;
+	margin-top: 5vh;
+}
+input[readonly], textarea {
+
+  background-color : #d1d1d1; 
+
+}
+table, th, td{
+	border-style: solid;
+	border-width: 1;
+  width: 100%;
+  white-space: nowrap;
+}
