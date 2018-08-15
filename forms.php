@@ -13,6 +13,7 @@ $geturl =  'https://experience.thomsonsafaris.com/gravityformsapi/'.$route.'/?ap
 echo $geturl;
 $response = file_get_contents($geturl);
 $entries = json_decode($response, true);
+echo $response;
 
 foreach($entries["response"]["fields"] as $field){
     $id = $field['id'];
