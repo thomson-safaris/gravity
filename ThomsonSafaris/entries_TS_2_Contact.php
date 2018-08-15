@@ -12,6 +12,7 @@ $sig = calculate_signature($string_to_sign, $private_key);
 $geturl =  'http://thomsonsafaris.com/gravityformsapi/'.$route.'/?api_key='.$api_key.'&signature='.$sig.'&expires='.$expires;
 $response = file_get_contents($geturl);
 $entries = json_decode($response, true);
+echo $response;
 
 foreach($entries["response"]["entries"] as $entry){
 	$firstname = $entry['1'];
