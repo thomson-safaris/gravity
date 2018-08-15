@@ -19,7 +19,8 @@ foreach($entries["response"]["entries"] as $entry){
 	$email = $entry['2'];
     $phone = $entry['3'];	
     $trip = $entry['4'];
-    $traveldate = $entry['7'];
+	$travelmonth = $entry['8'];
+	$travelyear = $entry['9'];
     $adults = $entry['5'];
     $children = $entry['6'];
 	$ip = $entry['ip'];
@@ -27,7 +28,8 @@ foreach($entries["response"]["entries"] as $entry){
 	$entrydate = $entry['date_created'];
 	$form = 'TS Reservation';
 
-	$sql="call TS_3_Reservation ('$fullname', '$email', '$phone', '$trip', '$traveldate', '$adults', '$children', '$ip', '$source_url', '$entrydate', '$form');";
+	$sql="call TS_3_Reservation ('$fullname', '$email', '$phone', '$trip', '$travelmonth', '$travelyear', '$adults', '$children', '$ip', '$source_url', '$entrydate', '$form');";
 	mysqli_query($con, $sql);
-}/**/
+	echo $sql;
+}
 
