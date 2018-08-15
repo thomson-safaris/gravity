@@ -14,6 +14,7 @@ include_once 'includes/connection.php';
 			<li><a href="TS.php">TS</a></li><br>
 			<li><a href="AW.php">AW</a></li><br>
 			<li><a href="TSL.php">TSL</a></li><br>
+			<li><a href="TFA.php">TSL</a></li><br>
 		</ul>
 	</nav>
 </header>
