@@ -13,9 +13,9 @@ $geturl =  'https://experience.thomsonsafaris.com/gravityformsapi/'.$route.'/?ap
 echo $geturl;
 $response = file_get_contents($geturl);
 $entries = json_decode($response, true);
-echo $response;
 
 foreach($entries["response"]["entries"] as $entry){
+	echo '1';
 	$first = $entry['4'];
 	$last = $entry['5'];	
 	$email = $entry['2'];	
