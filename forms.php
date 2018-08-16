@@ -4,7 +4,7 @@ include 'header.php';
 $api_key = "f96fb2e030";
 $private_key = "fc91078a29fdc1b";
 $method  = "GET";
-$route    = "forms/1";
+$route    = "forms/4";
 $expires = strtotime("+60 mins");
 $string_to_sign = sprintf("%s:%s:%s:%s", $api_key, $method, $route, $expires);
 $sig = calculate_signature($string_to_sign, $private_key);
